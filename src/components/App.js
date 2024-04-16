@@ -51,12 +51,14 @@ const FlamesApp = () => {
                 onChange={(e) => setName1(e.target.value)}
                 placeholder="Enter first name"
                 data-testid="input1"
+                name="name1"
             />
             <input
                 value={name2}
                 onChange={(e) => setName2(e.target.value)}
                 placeholder="Enter second name"
                 data-testid="input2"
+                name="name2"
             />
             <button
                 data-testid="calculate_relationship"
@@ -66,7 +68,7 @@ const FlamesApp = () => {
                 onClick={clear}
                 data-testid="clear"
             >Clear</button>
-            {relation && <h3 data-testid="answer">{relation}</h3>}
+            <h3 data-testid="answer">{relation}</h3>
         </div>
     );
 }
